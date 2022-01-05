@@ -15,9 +15,10 @@
     padding: 0 2%;
 }
 
-header {
+header, footer {
     padding: 20px 0px;
-    background: antiquewhite;
+    background: black;
+    color: #ffffff;
 }
 
 .social-media {
@@ -32,7 +33,7 @@ header {
 }
 
 .logo img {
-    width: 80px;
+    width: inherit;
 }
 
 .menu {
@@ -40,7 +41,7 @@ header {
 }
 
 .menu a {
-    color: black;
+    color: #ffffff;
     text-decoration: none;
     text-align: right;
     font-weight: bold;
@@ -52,6 +53,9 @@ header {
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.8);
     position: relative;
+    display: flex;
+    flex-wrap: wrap;
+  
 }
 
 .img-warraper img {
@@ -59,8 +63,34 @@ header {
     height: 100vh;
     margin: 2px auto;
     padding: 3px auto;
-    opacity: 0.5;
-    
+    opacity: 0.5rem;
+    animation: zoom 25s;
+       
+}
+
+.imgsobreposta {
+    position: absolute;
+    width: 40%;
+    overflow: hidden;
+    left: 60%;
+}
+
+.imgsobreposta img {
+    width: 100%;
+    height: 100vh;
+    border-radius: 80% 0 0 ;
+    animation: zoom 25s;
+    opacity: 0.5rem;
+
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 .banner {
@@ -69,4 +99,89 @@ header {
     left: 15%;
 }
 
+.banner h1 {
+    color: #292020;
+    font-size: 2.5rem;
+    font-weight: 300;
+    text-shadow: .3rem .4rem .2rem rgba(0, 0, 0, 0.3);
+    margin-bottom: 1rem;
+    opacity: 0;
+    animation: moveBanner 1s forwards;
+}
+
+.banner p {
+    color: #dacbcb;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    text-shadow: .3rem .4rem .2rem rgba(0, 0, 0, 0.3);
+    letter-spacing: .2rem;
+    animation: moveBanner 1.7s forwards;
+}
+
+.banner button{
+    padding: .5rem 1rem;
+    text-align: center;
+    border-radius: 5px;
+    background: #c31432;  
+    color: #ffffff;
+    font-weight: 700;
+    border: none;
+    letter-spacing: .5rem;
+    cursor: pointer;
+    animation: moveBanner 1.9s forwards;
+}
+
+
+.banner button:hover{
+    opacity: .3rem;
+    text-transform: uppercase;
+}
+
+@keyframes moveBanner {
+    0% {
+        transform: translateY(10rem) rotateY(-30deg);
+    }
+    100% {
+        transform: translateY(0), rotateY(0);
+        opacity: 1;
+    }
+}
+
+.rodape_final{
+    display: flex;
+    justify-content: space-around;
+    padding: .3rem;
+
+}
+
+.sec_rodape{
+    border: 1px black solid;
+    width: 33.33%;
+    padding: 5px auto;
+    background: red;
+}
+
+.sec_rodape img {
+    width: inherit;
+    text-align: center;
+}
+
+.sec_rodape #copyright{
+    text-align: center;
+    padding-top: 5px;
+}
+
+ul {
+    list-style: none;
+    padding-top: 5px;
+}
+
+.sec_rodape li {
+    text-align: justify;
+    line-height: 1.5rem;
+}
+
+.sec_rodape .social_links a{
+    text-align: right;
+}
 
